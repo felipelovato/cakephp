@@ -715,7 +715,7 @@ class DboSource extends DataSource {
 				list($alias, $virtual) = explode($this->virtualFieldSeparator, $field);
 
 				if (!ClassRegistry::isKeySet($alias)) {
-					return;
+					continue;
 				}
 
 				$Model = ClassRegistry::getObject($alias);
